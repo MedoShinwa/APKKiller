@@ -582,7 +582,7 @@ jobject processInvoke(JNIEnv *env, jclass clazz, jobject method, jobjectArray ar
                     auto mSigningDetailsField = signingInfoClass.getField("mSigningDetails");
                     auto mSigningDetails = mSigningDetailsField.get(signingInfo);
 
-                    Class signingDetailsClass(env, "android.content.pm.PackageParser$SigningDetails");
+                    Class signingDetailsClass(env, "android.content.pm.SigningDetails");
                     auto signaturesField = signingDetailsClass.getField("signatures");
                     auto pastSigningCertificatesField = signingDetailsClass.getField("pastSigningCertificates");
 
